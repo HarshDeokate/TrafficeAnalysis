@@ -1,0 +1,58 @@
+.traffic-card {
+  background: #1A1A35;
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 12px;
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.traffic-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00D4AA, #FF6B35);
+}
+.traffic-card--empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 8px;
+  min-height: 160px;
+}
+.empty-icon { color: rgba(255,255,255,0.15); }
+.empty-icon svg { width: 36px; height: 36px; }
+.empty-text { font-size: 14px; font-weight: 500; color: #9090B8; }
+.empty-sub { font-size: 12px; color: rgba(144,144,184,0.6); }
+
+.tc-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.tc-count { font-size: 48px; font-weight: 600; font-family: 'JetBrains Mono', monospace; line-height: 1; color: #F0F0FF; }
+.tc-count-label { font-size: 11px; color: #9090B8; font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
+
+.level-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'JetBrains Mono', monospace;
+  white-space: nowrap;
+}
+
+.congestion-section { display: flex; flex-direction: column; gap: 6px; }
+.congestion-header { display: flex; align-items: center; justify-content: space-between; }
+.metric-name { font-size: 11px; color: #9090B8; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px; }
+.congestion-val { font-size: 13px; font-family: 'JetBrains Mono', monospace; font-weight: 500; }
+.congestion-track { background: rgba(255,255,255,0.07); border-radius: 6px; height: 8px; overflow: hidden; }
+.congestion-fill { height: 100%; border-radius: 6px; transition: width 0.7s ease; }
+.congestion-scale { display: flex; justify-content: space-between; font-size: 9px; color: rgba(144,144,184,0.5); font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px; }
+
+.metric-row { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.06); }
+.metric-coords { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #9090B8; }

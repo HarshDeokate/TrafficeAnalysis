@@ -1,0 +1,57 @@
+.signal-card {
+  background: #1A1A35;
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 12px;
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.signal-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00D4AA, #FF6B35);
+}
+
+.signal-left { display: flex; flex-direction: column; align-items: center; gap: 10px; flex-shrink: 0; }
+
+.signal-circle-wrap { position: relative; width: 92px; height: 92px; }
+.signal-circle-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.signal-seconds { font-size: 26px; font-weight: 600; font-family: 'JetBrains Mono', monospace; line-height: 1; }
+.signal-sec-label { font-size: 9px; color: #9090B8; font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; }
+
+.signal-btn {
+  background: transparent;
+  border: 1px solid;
+  border-radius: 6px;
+  padding: 5px 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.signal-btn:hover { opacity: 0.75; }
+
+.signal-right { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+
+.signal-priority { display: flex; align-items: center; gap: 8px; }
+.signal-priority-text { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 1px; }
+
+.signal-action { font-size: 13px; color: #9090B8; line-height: 1.4; }
+
+.signal-stats { display: flex; gap: 16px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.06); }
+.signal-stat { display: flex; flex-direction: column; gap: 2px; }
+.signal-stat-val { font-size: 16px; font-weight: 600; font-family: 'JetBrains Mono', monospace; color: #F0F0FF; }
+.signal-stat-name { font-size: 9px; color: #9090B8; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px; text-transform: uppercase; }

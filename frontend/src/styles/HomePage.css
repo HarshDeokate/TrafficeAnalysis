@@ -1,0 +1,111 @@
+/* ================= MAP ================= */
+
+.map-main {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: calc(100vh - 72px); /* Full page below header */
+  overflow: hidden;
+}
+
+.map-main > * {
+  width: 100%;
+  height: 100%;
+}
+
+/* ================= FORECAST / RESULT CARD ================= */
+
+.prediction-overlay {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;      /* Bottom Left */
+  top: auto;
+  right: auto;
+  z-index: 9999;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.result-card-compact,
+.forecast-card-compact {
+  width: 330px;              /* Bigger */
+  min-height: 180px;
+  padding: 22px;
+
+  background: rgba(15, 20, 45, 0.92);
+  backdrop-filter: blur(16px);
+
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+.result-header,
+.forecast-header {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #00D4AA;
+  letter-spacing: .5px;
+}
+
+.result-stat,
+.forecast-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.stat-label {
+  font-size: 15px;
+  color: #bdbdbd;
+}
+
+.stat-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+.congestion-mini {
+  height: 8px;
+  margin-top: 18px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(255,255,255,.08);
+}
+
+.congestion-bar {
+  height: 100%;
+  background: linear-gradient(90deg,#00D4AA,#FF6B35);
+}
+
+.forecast-meta {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.forecast-meta small {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #c2c2c2;
+}
+
+.prediction-overlay{
+
+    position:absolute;
+
+    left:24px;
+
+    bottom:24px;
+
+    z-index:999;
+
+}

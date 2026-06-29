@@ -1,0 +1,42 @@
+# ── Environment variables (NEVER commit these) ──
+.env
+.env.local
+.env.production
+.env.*.local
+
+# ── Frontend (Vite / React) ──
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.env
+frontend/.env.local
+
+# ── Backend (Python / FastAPI) ──
+backend/__pycache__/
+backend/*.py[cod]
+backend/*.pth
+backend/logs/
+backend/output/
+backend/venv/
+backend/.venv/
+backend/env/
+*.egg-info/
+.pytest_cache/
+__pycache__/
+
+# ── Model weights (large binary files) ──
+*.pth
+*.pt
+*.ckpt
+*.h5
+
+# ── OS / Editor ──
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+
+backend/models/*.pkl
